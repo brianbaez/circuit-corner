@@ -1,0 +1,19 @@
+﻿@using circuit_corner.web.Features.Components
+
+@page "/products"
+
+<Navbar />
+
+<h2>Products</h2>
+<p>Here you'll find all of the products we have in stock.</p>
+
+@foreach (var product in products) {
+    <tr>
+        <td>@product</td>
+    </tr>
+}
+
+@code {
+    public string[] products = { "CPU", "CPU Cooler", "Motherboard", "Memory", "Storage", "GPU", "Case", "Power Supply"};
+
+}
